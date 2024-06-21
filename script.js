@@ -60,7 +60,9 @@ function createProductCard(product) {
                         <img style="height: 200px; width: 200px;" src="${product.images}"
                                  height="200" width:"200" alt="${product.title}">
                             <h5 class="card-title product-title "> ${product.title}</h5>
-                            <p class="card-text text-success product-price">Price: $${priceAfterDiscount}</p>
+                            <p class="card-text text-muted product-price "> <del>Rs. ${product.price} </del></p>
+                            <p class="card-text text-dark  product-price"><strong> Rs. ${priceAfterDiscount} </strong></p>
+                            <p class="card-text text-whiteproduct-discount "><span class=" bg-danger px-3 py-1 text-white rounded ">save ${discountPercentage}% </span> </p>
                         </div>
                         <div>
                             <img src="${product.thumbnail}"
@@ -69,6 +71,8 @@ function createProductCard(product) {
                         <p class="card-text text-warning fw-bold product-rating">Rating: ${product.rating}</p>
 
                         <button class="btn btn-secondary show" id="show">Show Description</button>
+                       
+
                         <div class="container product-description" id = "product-description">
                             <div class="row">
                                 <div class="col">
@@ -78,6 +82,7 @@ function createProductCard(product) {
                              
                             </div>
                         </div>
+                         <button class="btn btn-primary mt-2" >Add to Cart</button>
                     </div>
             
          
